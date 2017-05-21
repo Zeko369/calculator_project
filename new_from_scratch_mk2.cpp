@@ -42,7 +42,7 @@ float primary(int beg, int end); float secondry(int beg, int end);
 
 int main()
 {
-	cout << "\033[1;31mbold red text\033[0m\n";
+	// cout << "\033[1;31mbold red text\033[0m\n";
 	string debugOnOff;
 
 	cout << "Calculator, new from scrach MK2 \n";
@@ -138,7 +138,9 @@ int main()
 			x = primary(0, b.size());	
 		}
 		else if(highestStep == 2)    // * and /
-		{}
+		{
+			x = secondry(0, b.size());	
+		}
 		else if(highestStep == 3)    // ( and )
 		{}
 		else if(highestStep == 4)    // ^ and sqrt
@@ -178,6 +180,28 @@ float primary(int beg, int end)
 	}	
 
 	return temp;
+}
+
+float secondry(int beg, int end)
+{
+	for(int i = beg; i<end; i++)
+	{
+		//1+2*4
+		if(ops[i] == '*')
+		{
+			num[i+1] *= num[i];
+			num[i] = 0;
+			ops[i] = '+';
+		}
+		else if(ops[i] == '/')
+		{
+			num[i+1] = num[i] / num[i+1];
+			num[i] = 0;
+			ops[i] = '+';
+		}
+	}
+
+	return primary(beg, end);
 }
 
 void printB()
