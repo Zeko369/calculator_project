@@ -1,0 +1,14 @@
+Projects 
+- Soldering iron
+- Quadcopter
+- RPi Calculator
+- Mechanical keyboard
+- A FRICKING CAR
+- Linux from scratch
+
+
+TODO
+- vim proper setup
+- linux test in vm/vb
+- a list for quad
+- marin - croz
