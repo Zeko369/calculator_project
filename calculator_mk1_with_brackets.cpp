@@ -190,7 +190,8 @@ int main()
 		}
 
 		// printOps();
-		
+						b += a[i];
+	
 		//printNumbres();
 		//printRemains();
 		
@@ -212,7 +213,7 @@ int main()
 	    cout << bracketCount << endl;
 	 
 		if(highestStep == 1)
-		{
+		
 			x = primary(0, n_numbers, 0);
 		}
 		else if(highestStep == 2)
