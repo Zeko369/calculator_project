@@ -7,7 +7,7 @@ do
 	pero="$line"
 done < "$filename"
 
-echo Compiloing
+echo Compiling
 echo $pero
 
 g++ $pero -o test
