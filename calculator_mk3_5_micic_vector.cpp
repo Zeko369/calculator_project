@@ -45,11 +45,13 @@ vector<char> ops(lenOps);
 
 int nIter = 0;					//current number
 int oIter = 0;					//        operator
+double tempAdd = 0;				//beg from string to vector
 
 //FUNCTIONS
 bool isNum(char testNum){ return testNum - 48 >= 0 && testNum - 48 < 10 ? 1 : 0; }
 void printB(), printNum(), printOps();
 void clear();
+int addDot(int from); int addNum(int from);
 
 float primary(int beg, int end){}
 float secondry(int beg, int end){}
@@ -85,7 +87,7 @@ int main()
 			if(a[i] == ' '){ continue; }			//space
 			else if(isNum(a[i] || a[i] == '.'))		//num
 			{
-				
+							
 			}
 			else
 			{
@@ -111,20 +113,6 @@ int main()
 			cout << "Level: " << highestStep << endl;
 		}	
 		
-		if(highestStep == 1)	     // + and -
-		{
-			x = primary(0, b.size());	
-		}
-		else if(highestStep == 2)    // * and /
-		{
-			x = secondry(0, b.size());	
-		}
-		else if(highestStep == 3)    // ( and )
-		{}
-		else if(highestStep == 4)    // ^ and sqrt
-		{}
-		else{ cout << "Go home you're drunk\n"; break; }
-
 		cout << root << rest <<  x << endl;
 	}
 	
