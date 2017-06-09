@@ -19,14 +19,14 @@ using namespace std;
 //<:1>
 bool debug = 1;
 
-//string user = "\033[1;32mzeko\033[0m";
-//string root = "\033[1;31mroot\033[0m";
-//string rest = "\033[1;36m@calculator:~$ \033[0m";
+string user = "\033[1;32mzeko\033[0m";
+string root = "\033[1;31mroot\033[0m";
+string rest = "\033[1;36m@calculator:~$ \033[0m";
 
 //for non termianl
-string user = "";
-string root = "";
-string rest = "";
+// string user = "";
+// string root = "";
+// string rest = "";
 
 //main
 string a;		//in
@@ -76,7 +76,7 @@ int main()
 		getline(cin, a);
 		if(a == "quit" || a == "exit"){ break; }
 
-	    if(debug)
+		if(debug)
 		{
 			for(int i = 0; i<a.size(); i++){ cout << a[i]; }
 			cout << endl;
